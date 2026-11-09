@@ -1,17 +1,13 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
+import os
 
+from dotenv import load_dotenv
 
-class Settings(BaseSettings):
-    model_config = SettingsConfigDict(
-        env_file=".env",
-        env_file_encoding="utf-8",
-        extra="ignore",
-    )
+load_dotenv()
 
-    bot_token: str
-    admin_id: int
-    playerok_url: str = "https://playerok.com/profile/yunogasaiip/products"
-    shop_name: str = "Yuno Shop"
-
-
-settings = Settings()
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
+PLAYEROK_URL = os.getenv(
+    "PLAYEROK_URL", "https://playerok.com/profile/yunogasaiip/products"
+)
+DB_PATH = os.getenv("DB_PATH", "shop.db")
+REVIEWS_PER_PAGE = 5
