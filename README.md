@@ -1,4 +1,4 @@
-# Бот-магазин (Telegram, aiogram 3)
+# Exe shop — Telegram-бот магазина (aiogram 3)
 
 ## Запуск
 1. `pip install -r requirements.txt`

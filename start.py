@@ -7,7 +7,7 @@ from ..keyboards import main_menu, safe_deal_kb
 
 router = Router()
 
-WELCOME = "👋 Добро пожаловать!\n\nВыберите раздел:"
+WELCOME = "👋 Добро пожаловать в Exe shop!\n\nВыберите раздел:"
 
 
 @router.message(CommandStart())
